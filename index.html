@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>القيادة الآمنة الذكية</title>
+
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+</style>
+
+<script>
+  // Tailwind Customization
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          neon: '#39FF14',
+        }
+      }
+    }
+  }
+</script>
+</head>
+
+<body class="bg-black text-white min-h-screen flex flex-col">
+
+<!-- ================= HEADER ================= -->
+<header class="p-4 flex justify-between items-center bg-gray-900 shadow">
+    <div class="text-2xl">☰</div>
+    <div class="text-lg font-bold">القيادة الآمنة الذكية</div>
+    <div class="text-2xl">🔔</div>
+</header>
+
+<!-- Safety Score Bar -->
+<div class="w-full bg-gray-800">
+    <div id="safetyBar" class="h-2 bg-neon" style="width: 92%;"></div>
+</div>
+
+<!-- ================= MAIN CONTENT ================= -->
+<main id="mainContent" class="flex-1 overflow-y-auto p-4">
+
+    <!-- SPEED + GPS SECTION -->
+    <section class="flex flex-col items-center mt-6">
+        <!-- Speed Circle -->
+        <div class="w-56 h-56 rounded-full border-4 border-neon flex flex-col items-center justify-center">
+            <div id="speedValue" class="text-5xl font-bold">60</div>
+            <div class="text-sm text-gray-300 mt-1">كم/س</div>
+        </div>
+
+        <!-- GPS & Camera Status -->
+        <div class="mt-4 space-y-1 text-center">
+            <div id="gpsStatus" class="text-neon font-semibold">GPS: نشط</div>
+            <div class="text-neon font-semibold">الكاميرا: نشطة</div>
+        </div>
+    </section>
+
+    <!-- SERVICE CARDS -->
+    <section class="grid grid-cols-2 gap-4 mt-8">
+
+        <!-- Card 1 - Camera Status -->
+        <div class="bg-gray-900 p-4 rounded-lg shadow">
+            <h3 class="text-lg font-bold mb-2">حالة الكاميرا</h3>
+            <ul class="text-sm space-y-1">
+                <li class="text-neon">الخارجية: نشطة</li>
+                <li class="text-neon">الداخلية: نشطة</li>
+                <li class="text-neon">IR: نشطة</li>
+            </ul>
+        </div>
+
+        <!-- Card 2 - Violations -->
+        <div id="violationsCard" class="bg-gray-900 p-4 rounded-lg shadow">
+            <h3 class="text-lg font-bold mb-2">المخالفات النشطة</h3>
+            <div id="violationCount" class="text-3xl font-bold text-red-500">1</div>
+        </div>
+
+        <!-- Card 3 - SOS -->
+        <div class="bg-gray-900 p-4 rounded-lg shadow flex flex-col items-center justify-center">
+            <h3 class="text-lg font-bold mb-3">SOS استغاثة فورية</h3>
+            <button onclick="sendSOS()" class="bg-red-600 w-full py-3 rounded-lg text-lg font-bold">
+                إرسال SOS
+            </button>
+        </div>
+
+        <!-- Card 4 - Horn Quota -->
+        <div class="bg-gray-900 p-4 rounded-lg shadow">
+            <h3 class="text-lg font-bold mb-2">حصص الكلاكس</h3>
+            <div id="hornQuota" class="text-2xl font-bold text-neon">5 / 10</div>
+        </div>
+
+    </section>
+
+</main>
+
+<!-- SOS MESSAGE (hidden) -->
+<div id="sosMessage"
+     class="hidden fixed bottom-20 left-1/2 transform -translate-x-1/2 bg-neon text-black px-6 py-3 rounded-lg font-bold shadow-lg">
+    تم إرسال طلب الاستغاثة والـ GPS
+</div>
+
+<!-- ================= FOOTER NAVIGATION ================= -->
+<footer class="bg-gray-900 p-3 flex justify-around text-center text-gray-300 text-sm fixed bottom-0 w-full">
+
+    <div onclick="showHome()" class="flex flex-col items-center cursor-pointer">
+        <span class="text-xl">🏠</span><span>الرئيسية</span>
+    </div>
+
+    <div onclick="showViolations()" class="flex flex-col items-center cursor-pointer">
+        <span class="text-xl">⚠️</span><span>المخالفات</span>
+    </div>
+
+    <div onclick="showProfile()" class="flex flex-col items-center cursor-pointer">
+        <span class="text-xl">👤</span><span>الملف الشخصي</span>
+    </div>
+
+    <div onclick="showSettings()" class="flex flex-col items-center cursor-pointer">
+        <span class="text-xl">⚙️</span><span>الإعدادات</span>
+    </div>
+
+</footer>
+
+<!-- ================= JAVASCRIPT ================= -->
+<script>
+/* ---------------- CHANGE VIEWS ---------------- */
+
+function showHome() {
+    location.reload(); // يعود للواجهة الرئيسية
+}
+
+function showViolations() {
+    document.getElementById('mainContent').innerHTML = `
+        <h2 class="text-xl font-bold mb-4 text-neon">سجل المخالفات</h2>
+        <p class="text-gray-300">لا توجد مخالفات جديدة.</p>
+    `;
+}
+
+function showProfile() {
+    document.getElementById('mainContent').innerHTML = `
+        <h2 class="text-xl font-bold mb-4 text-neon">الملف الشخصي</h2>
+        <p class="text-gray-300">اسم السائق: أحمد محمد</p>
+        <p class="text-gray-300">رقم المركبة: 1234</p>
+    `;
+}
+
+function showSettings() {
+    document.getElementById('mainContent').innerHTML = `
+        <h2 class="text-xl font-bold mb-4 text-neon">الإعدادات</h2>
+        <p class="text-gray-300">لا توجد إعدادات متاحة حالياً.</p>
+    `;
+}
+
+/* ---------------- SOS ACTION ---------------- */
+function sendSOS() {
+    const msg = document.getElementById('sosMessage');
+    msg.classList.remove("hidden");
+
+    setTimeout(() => {
+        msg.classList.add("hidden");
+    }, 3000);
+}
+
+/* ---------------- UPDATE DASHBOARD ---------------- */
+function updateDashboard() {
+    const speed = Math.floor(Math.random() * 100);
+    const quota = Math.floor(Math.random() * 10);
+    const score = 80 + Math.floor(Math.random() * 20);
+
+    document.getElementById('speedValue').innerText = speed;
+    document.getElementById('hornQuota').innerText = `${quota} / 10`;
+    document.getElementById('safetyBar').style.width = score + "%";
+}
+
+setInterval(updateDashboard, 5000);
+</script>
+
+</body>
+</html>
