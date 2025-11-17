@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شرح الملصق الذكي ومنظومة SafeDrive AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* التغيير في الفونت الرئيسي */
+        body { 
+            font-family: 'Tajawal', 'Inter', sans-serif; 
+            background-color: #f0f5f8; /* خلفية أفتح وأكثر هدوءًا */
+            color: #1f2937; 
+            line-height: 1.8;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+        
+        /* تصميم عنوان رئيسي أنيق */
+        .header-title { 
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* تصميم بطاقة ثلاثية الأبعاد (3D Card) */
+        .elegant-card { 
+            background-color: #ffffff; 
+            border-radius: 1.25rem; /* زوايا أكثر استدارة */
+            /* ظل ثلاثي الأبعاد بسيط */
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); 
+            padding: 2.5rem; 
+            margin-bottom: 2.5rem; 
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 5px solid #10b981; /* خط علوي بلون الأمان */
+        }
+        .elegant-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 25px 35px -8px rgba(0, 0, 0, 0.15), 0 15px 15px -8px rgba(0, 0, 0, 0.08);
+        }
+        
+        /* تنسيق العنوان داخل البطاقة */
+        .section-header-card { 
+            border-bottom: 3px solid #60a5fa; /* لون أزرق جذاب */
+            padding-bottom: 0.75rem; 
+            margin-bottom: 2rem; 
+            font-weight: 800; /* خط سميك */
+            color: #1e3a8a; /* أزرق داكن */
+            text-align: right;
+        }
+
+        /* تنسيق العناصر المميزة */
+        .feature-item { 
+            display: flex; 
+            align-items: flex-start; 
+            margin-bottom: 2rem;
+            padding-right: 0.5rem;
+            border-right: 4px solid #34d399; /* خط أخضر بجانب كل ميزة */
+        }
+        .feature-icon { 
+            color: #059669; /* أخضر غامق */
+            font-size: 1.8rem; 
+            margin-left: 1rem; 
+            flex-shrink: 0;
+            padding-top: 0.1rem;
+        }
+        .text-lead {
+            font-weight: 500;
+            color: #4b5563;
+        }
+    </style>
+</head>
+<body class="dir-rtl">
+
+    <div class="bg-gradient-to-r from-blue-700 to-indigo-600 text-white text-center py-12 mb-10 rounded-b-3xl shadow-2xl">
+        <h1 class="header-title text-5xl md:text-6xl font-extrabold mb-2">SafeDrive AI</h1>
+        <p class="text-2xl md:text-3xl font-light">الملصق الذكي: حجر الزاوية للأمان والعدالة المرورية</p>
+    </div>
+
+    <div class="container">
+
+        <!-- القسم 1: الشعار والرؤية -->
+        <section class="elegant-card border-top-indigo-500">
+            <h2 class="section-header-card text-3xl">SafeDrive AI: الرؤية والشعار</h2>
+            <div class="flex flex-col md:flex-row items-center md:space-x-8 md:space-x-reverse">
+                <div class="md:w-1/2 mb-6 md:mb-0">
+                    <!-- الصورة الأولى: الشعار (المعرف: uploaded:1000728679.jpg-8a6ff650-7f88-46d8-bc3b-f5d241692c41) -->
+                    <img src="uploaded:1000728679.jpg-8a6ff650-7f88-46d8-bc3b-f5d241692c41" alt="شعار SafeDrive AI" class="w-full h-auto rounded-xl shadow-2xl transition duration-300 hover:scale-[1.01] border border-gray-100">
+                    <p class="text-center text-sm text-gray-500 mt-3">الشعار يجسد الاندماج بين القيادة (المقود)، التكنولوجيا (الدماغ)، والموقع (الخريطة).</p>
+                </div>
+                <div class="md:w-1/2 text-gray-700 text-lg">
+                    <p class="mb-4 text-lead">يُعبر الشعار عن المبادئ الأساسية للمنظومة: **الأمان، الذكاء، والموثوقية**. كل عنصر في الشعار مصمم ليعكس جانباً من وظيفة التطبيق، من رصد السائق إلى تتبع الموقع بذكاء. نحن نبني نظاماً لا يكتفي بالمراقبة، بل يهدف إلى تغيير سلوك القيادة للأفضل.</p>
+                    <ul class="list-disc list-inside space-y-2 mt-4 text-sm font-medium text-gray-600">
+                        <li>**القيادة الذكية:** استخدام الذكاء الاصطناعي لرصد السلوكيات الخطرة.</li>
+                        <li>**العدالة المطلقة:** توفير دليل مرئي وموثق لكل حدث.</li>
+                        <li>**الحماية الشاملة:** للسائق، الراكب، والمشاة.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- القسم 2: الملصق الذكي - وجهة الداخل (تصميمك) -->
+        <section class="elegant-card border-top-green-500">
+            <h2 class="section-header-card text-3xl">الملصق الذكي (الوجه الداخلي): مركز التحكم والأمان</h2>
+            <p class="text-lg text-gray-700 mb-8 text-lead">هذا الوجه من الملصق هو الأهم، حيث يضمن أمان وخصوصية السائق والركاب، ويسجل تفاعلات القيادة داخلياً.</p>
+            
+            <div class="flex flex-col md:flex-row items-center md:space-x-8 md:space-x-reverse">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <!-- الصورة الثانية: الملصق (المعرف: uploaded:1000728419.jpg-f1a76b9a-172a-4eca-a421-0fd655413bcb) -->
+                    <img src="uploaded:1000728419.jpg-f1a76b9a-172a-4eca-a421-0fd655413bcb" alt="الملصق الذكي - واجهة داخلية" class="w-full h-auto rounded-xl shadow-2xl transition duration-300 hover:scale-[1.01] border border-gray-100">
+                    <p class="text-center text-sm text-gray-500 mt-3">تصميم يجمع الكاميرا، الباركود، المستشعرات، والمؤشرات الضوئية.</p>
+                </div>
+                <div class="md:w-1/2 text-gray-700">
+                    <div class="space-y-6">
+                        <!-- 1. الكاميرا الداخلية -->
+                        <div class="feature-item">
+                            <span class="feature-icon">&#128247;</span> 
+                            <div>
+                                <h3 class="font-bold text-xl text-blue-800">الكاميرا الداخلية (AI Cabin Cam)</h3>
+                                <p class="text-base text-gray-700">التسجيل يتم فقط بأمر مباشر من **قائد المركبة أو العميل** عبر التطبيق لضمان **الخصوصية**. يتم تسجيل صوت وصورة كـ "دليل أمان" يضمن الاطمئنان داخل المركبة، خصوصاً في حالات النزاع أو طلب الرحلات.</p>
+                            </div>
+                        </div>
+                        <!-- 2. الباركود والرقم التعريفي -->
+                        <div class="feature-item">
+                            <span class="feature-icon">&#128203;</span> 
+                            <div>
+                                <h3 class="font-bold text-xl text-blue-800">الباركود والرقم التعريفي (Driver Link)</h3>
+                                <p class="text-base text-gray-700">يستخدم لربط **السائق بالمركبة** فور دخوله. عند مسح السائق للباركود بالتطبيق، يتم تسجيل هويته كقائد للمركبة بشكل آلي (Driver ID Linked). هذا يضمن مراقبة ومحاسبة دقيقة لسلوك السائق الفعلي.</p>
+                            </div>
+                        </div>
+                        <!-- 3. لمبة التسجيل الخضراء -->
+                        <div class="feature-item">
+                            <span class="feature-icon">&#128994;</span> 
+                            <div>
+                                <h3 class="font-bold text-xl text-blue-800">مؤشر الأمان الضوئي (Green Light)</h3>
+                                <p class="text-base text-gray-700">تضيء اللمبة الخضراء فور بدء عملية التسجيل (الكاميرا والميكروفون). وظيفتها هي **الشفافية الكاملة**، حيث تخبر جميع من في السيارة بأن التسجيل قيد العمل، مما يعزز الشعور بالأمان.</p>
+                            </div>
+                        </div>
+                        <!-- 4. مستشعر الصوت والميكروفون -->
+                        <div class="feature-item">
+                            <span class="feature-icon">&#128266;</span> 
+                            <div>
+                                <h3 class="font-bold text-xl text-blue-800">مستشعر الصوت والميكروفون (Noise & Behavior Sensor)</h3>
+                                <p class="text-base text-gray-700">**المستشعر:** يرصد استخدام **الكلاكس (آلة التنبيه)** بشكل مفرط وغير مبرر لتطبيغ نظام تحجيم الضوضاء. **الميكروفون:** يعمل لتسجيل الصوت مع الكاميرا لإكمال دليل الأمان والسلامة والطمأنينة داخل السيارة.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- القسم 3: الملصق الذكي - وجهة الخارج -->
+        <section class="elegant-card border-top-indigo-500">
+            <h2 class="section-header-card text-3xl">الملصق الذكي (الوجه الخارجي): العين الذكية على الطريق</h2>
+            <p class="text-lg text-gray-700 mb-8 text-lead">الكاميرا الخارجية هي مركز رصد البيئة المرورية والسلوكيات الخارجية، وهي المسؤولة عن تفعيل نظام العدالة المرورية والتحكم في الأساطيل.</p>
+            
+            <div class="flex flex-col md:flex-row-reverse items-center md:space-x-reverse md:space-x-8">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <div class="relative p-6 bg-gray-50 rounded-xl shadow-inner">
+                        <span class="text-7xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-20 text-indigo-400 font-extrabold">AI</span>
+                        <!-- الصورة الثانية: الملصق (المعرف: uploaded:1000728419.jpg-f1a76b9a-172a-4eca-a421-0fd655413bcb) - تم التأكد من صحة المعرف هنا -->
+                        <img src="uploaded:1000728419.jpg-f1a76b9a-172a-4eca-a421-0fd655413bcb" alt="الملصق الذكي - واجهة خارجية" class="w-full h-auto rounded-xl shadow-xl border border-gray-100 transform rotate-180 opacity-90">
+                    </div>
+                    <p class="text-center text-sm text-gray-500 mt-3">*هذا الجانب يوجه الكاميرا والمستشعر نحو الخارج لرصد الشارع.*</p>
+                </div>
+                <div class="md:w-1/2 text-gray-700">
+                    <div class="space-y-6">
+                        <!-- 1. رصد المسافات والسرعة -->
+                        <div class="feature-item">
+                            <span class="feature-icon">&#128663;</span> 
+                            <div>
+                                <h3 class="font-bold text-xl text-indigo-800">رصد المركبات والسرعة ومسافة الأمان</h3>
+                                <p class="text-base text-gray-700">يراقب مسافة الأمان بين المركبات (تجنب حوادث الصدم من الخلف)، ويقارن سرعة المركبة بالحدود المكررة (المسموح بها) على الطريق. يتم توثيق أي تجاوز للسرعة أو اقتراب مفرط.</p>
+                            </div>
+                        </div>
+                        <!-- 2. رصد الأجسام البشرية -->
+                        <div class="feature-item">
+                            <span class="feature-icon">&#128694;</span> 
+                            <div>
+                                <h3 class="font-bold text-xl text-indigo-800">رصد الأجسام البشرية (المشاة وراكبي الدراجات)</h3>
+                                <p class="text-base text-gray-700">تنبيه فوري للسائق في حال دخول مشاة أو دراجات إلى مسار المركبة. يقلل بشكل كبير من حوادث الدهس ويزيد من وعي السائق بمحيطه.</p>
+                            </div>
+                        </div>
+                        <!-- 3. التقاط الملصقات الأخرى -->
+                        <div class="feature-item">
+                            <span class="feature-icon">&#128279;</span> 
+                            <div>
+                                <h3 class="font-bold text-xl text-indigo-800">التقاط الملصقات الذكية ونقاط التحكم</h3>
+                                <p class="text-base text-gray-700">تستطيع الكاميرا التقاط الملصقات الأخرى المثبتة في الطريق أو عند مداخل الجراجات أو على مركبات النقل الجماعي لغرض: **الدفع الآلي**، **التتبع الدقيق لخطوط السير (السرفيس)**، و**التحقق من التصاريح**.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- القسم 4: الخلاصة والتكامل -->
+        <section class="elegant-card border-top-blue-500 bg-blue-50/50">
+            <h2 class="section-header-card text-3xl">التكامل الشامل: الملصق والتطبيق</h2>
+            <p class="text-xl font-semibold text-gray-800 text-center mb-6">الملصق الذكي هو الجهاز الذي يجمع بيانات الأمان (الداخلية) والعدالة (الخارجية)، ويرسلها إلى **تطبيق SafeDrive AI**.</p>
+            
+            <div class="grid md:grid-cols-3 gap-6 text-center">
+                <div class="p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-200 border-b-4 border-green-500">
+                    <h3 class="font-extrabold text-2xl text-green-700 mb-2">1. توثيق السائق</h3>
+                    <p class="text-gray-600 text-sm">يتم ربط هوية السائق مباشرة بالملصق لتسجيل سلوكه الفعلي بدقة.</p>
+                </div>
+                <div class="p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-200 border-b-4 border-indigo-500">
+                    <h3 class="font-extrabold text-2xl text-indigo-700 mb-2">2. العدالة الفورية</h3>
+                    <p class="text-gray-600 text-sm">البيانات (فيديو/صوت) هي دليل قاطع لفرض الغرامات أو منح المكافآت.</p>
+                </div>
+                <div class="p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-200 border-b-4 border-blue-500">
+                    <h3 class="font-extrabold text-2xl text-blue-700 mb-2">3. التتبع المتقدم</h3>
+                    <p class="text-gray-600 text-sm">متابعة دقيقة لمركبات الأساطيل والتزامها بخطوط السير والتصاريح.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="text-center text-gray-600 text-sm py-8 mt-10 bg-white border-t border-gray-200">
+        <p>منظومة SafeDrive AI | نسعى لقيادة آمنة وذكية.</p>
+    </footer>
+
+</body>
+</html>
+
